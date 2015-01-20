@@ -128,4 +128,6 @@ Example:
 
 1. Update version number in `package.json`, `bower.json`, and `lib/twine-rails/version.rb`
 2. Run `bundle install` to update `Gemfile.lock`
-3. Push the new tag to GitHub and the new version to rubygems with `bundle exec rake release`
+3. Run `make .uglify` to compile the `.js` and `.min.js`
+4. Commit this as `bump version to ____`
+5. Push the new tag to GitHub and the new version to rubygems with `bundle exec rake release`
