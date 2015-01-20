@@ -189,6 +189,10 @@ getContext = function(node, child) {
     if (!child) {
       node = node.parentNode;
     }
+    if (!node) {
+      console.warn("Unable to find context; please check that the node is attached to the DOM that Twine has bound, or that bindings have been initiated on this node's DOM");
+      return null;
+    }
     if ((id = node.bindingId) && (context = (_ref = elements[id]) != null ? _ref.childContext : void 0)) {
       return context;
     }
